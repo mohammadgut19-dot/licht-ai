@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <title>Licht AI - Mohammad</title>
     <style>
-        /* تنظیمات کل صفحه */
         body {
-            background-color: #000; /* کاملاً سیاه */
+            background-color: #000; /* پس‌زمینه سیاه */
             color: white;
             display: flex;
             flex-direction: column;
@@ -14,44 +13,26 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            font-family: 'Segoe UI', Tahoma, sans-serif;
+            font-family: sans-serif;
             overflow: hidden;
         }
-
-        /* استایل لوگوی متنی درخشان */
         .logo {
             font-size: 5rem;
             font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 15px;
+            letter-spacing: 10px;
             color: #fff;
-            /* درخشش آبی نئون */
-            text-shadow: 
-                0 0 7px #fff,
-                0 0 10px #fff,
-                0 0 21px #fff,
-                0 0 42px #00d4ff,
-                0 0 82px #00d4ff,
-                0 0 92px #00d4ff;
-            animation: flicker 2s infinite alternate;
+            /* ایجاد درخشش نئون آبی */
+            text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 40px #00d4ff;
+            animation: glow 1.5s ease-in-out infinite alternate;
         }
-
-        /* انیمیشن لرزش ملایم نور */
-        @keyframes flicker {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.8; }
-        }
-
-        .subtitle {
-            margin-top: 20px;
-            color: #555;
-            letter-spacing: 5px;
-            font-size: 1.2rem;
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff; }
+            to { text-shadow: 0 0 20px #00d4ff, 0 0 40px #00d4ff, 0 0 60px #00d4ff; }
         }
     </style>
 </head>
 <body>
     <div class="logo">LICHT AI</div>
-    <div class="subtitle">M O H A M M A D</div>
+    <div style="margin-top: 20px; color: #555;">M O H A M M A D</div>
 </body>
 </html>
